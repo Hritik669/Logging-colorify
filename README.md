@@ -1,1 +1,2 @@
-# Logging-colorify
+
+Thank you for using the Logging-Colorify package! We hope it brings a touch of color and simplicity to your Node.js applications. If you have any questions or feedback, please don't hesitate to reach out. Happy logging!

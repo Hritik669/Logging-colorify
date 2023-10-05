@@ -1,0 +1,41 @@
+{
+  "name": "logging-colorify",
+  "version": "1.1.21",
+  "description": "logging with different color",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "mocha --require ts-node/register test/**.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hritikchauhan27/logging-colorify.git"
+  },
+  "keywords": [
+    "logging with color"
+  ],
+  "author": "Hritik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hritikchauhan27/logging-colorify/issues"
+  },
+  "homepage": "https://github.com/hritikchauhan27/logging-colorify#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.6",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "^20.8.2",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "save-dev": "^0.0.1-security"
+  }
+}
