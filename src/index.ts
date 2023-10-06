@@ -7,39 +7,23 @@ import {LogOptions, allTypeLogsOptions, dailyApiDetail, dailyError, dailyInfo,
 async function logError(msg: string, options: LogOptions = allTypeLogsOptions) {
     const logFileName = getfileName(options)
     const logMessage = await logWithColor(msg, 'red', 'white');
-
     await writeToLogFile(logMessage, logFileName);
 }
 
 async function logInfo(msg: string, options: LogOptions = allTypeLogsOptions) {
-    const {
-        logPrefix,
-        logExtension,
-        logGrouping,
-    } = options;
-
     const logMessage = await logWithColor(msg, 'blue', 'white');
     const logFileName = getfileName(options)
-
     await writeToLogFile(logMessage, logFileName);
 }
 
 
 async function logWarn(msg: string, options: LogOptions = allTypeLogsOptions) {
-    const {
-        logPrefix,
-        logExtension,
-        logGrouping,
-    } = options;
-
     const logMessage = await logWithColor(msg, 'yellow', 'black');
     const logFileName = getfileName(options)
-
     await writeToLogFile(logMessage, logFileName);
 }
 
 async function createApiLogger(req: any, startTime?: number, options: LogOptions = dailyApiDetail) {
-    const {logPrefix,logExtension,logGrouping} = options;
 
     const logData = {
         Timestamp: '',
@@ -84,7 +68,6 @@ async function createApiLogger(req: any, startTime?: number, options: LogOptions
         await writeToLogFile(errorLogEntry, errorLogFileName);
     }
 }
-
 
 export {
     logError, logInfo, logWarn, createApiLogger, LogOptions, monthlyApiDetail, monthlyError,
